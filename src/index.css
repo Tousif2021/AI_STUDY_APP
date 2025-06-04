@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .prose {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+  
+  .prose p {
+    @apply mb-4;
+  }
+  
+  .prose ul {
+    @apply list-disc pl-6 mb-4;
+  }
+  
+  .prose ol {
+    @apply list-decimal pl-6 mb-4;
+  }
+  
+  .prose strong {
+    @apply font-bold;
+  }
+  
+  .prose em {
+    @apply italic;
+  }
+}
+
+/* FullCalendar Custom Styles */
+.fc {
+  @apply font-sans;
+}
+
+.fc .fc-toolbar {
+  @apply flex-wrap gap-4 !important;
+}
+
+.fc .fc-toolbar-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white !important;
+}
+
+.fc .fc-button {
+  @apply bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  @apply bg-blue-600 text-white border-blue-600 dark:bg-blue-500 dark:border-blue-500 !important;
+}
+
+.fc .fc-daygrid-day-number,
+.fc .fc-col-header-cell-cushion {
+  @apply text-gray-700 dark:text-gray-200 !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  @apply bg-blue-50 dark:bg-blue-900/20 !important;
+}
+
+.fc .fc-event {
+  @apply rounded-lg border-none shadow-sm cursor-pointer transition-transform hover:scale-[1.02] !important;
+}
+
+.fc .fc-event-main {
+  @apply p-1 !important;
+}
+
+.fc .fc-event-title {
+  @apply font-medium !important;
+}
+
+.fc .fc-list-event-title {
+  @apply font-medium !important;
+}
+
+.fc .fc-list-day-cushion {
+  @apply bg-gray-50 dark:bg-gray-800 !important;
+}
+
+/* Event Types */
+.fc .event-exam {
+  @apply bg-red-500 hover:bg-red-600 !important;
+}
+
+.fc .event-study {
+  @apply bg-blue-500 hover:bg-blue-600 !important;
+}
+
+.fc .event-deadline {
+  @apply bg-amber-500 hover:bg-amber-600 !important;
+}
+
+.fc .event-meeting {
+  @apply bg-purple-500 hover:bg-purple-600 !important;
+}
+
+/* Event Tooltip */
+.fc-event-tooltip {
+  @apply fixed z-50 bg-white dark:bg-gray-800 p-2 rounded shadow-lg border border-gray-200 dark:border-gray-700 text-sm;
+}
+
+/* Dark Mode Adjustments */
+.dark .fc-theme-standard td,
+.dark .fc-theme-standard th,
+.dark .fc-theme-standard .fc-scrollgrid {
+  @apply border-gray-700 !important;
+}
+
+.dark .fc-theme-standard .fc-list-day-cushion {
+  @apply bg-gray-800 !important;
+}
+
+.dark .fc-theme-standard .fc-list {
+  @apply border-gray-700 !important;
+}
+
+.dark .fc-theme-standard .fc-list-event:hover td {
+  @apply bg-gray-700/50 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .fc .fc-toolbar {
+    @apply flex-col items-stretch gap-4 !important;
+  }
+  
+  .fc .fc-toolbar-title {
+    @apply text-center !important;
+  }
+  
+  .fc .fc-event {
+    @apply text-sm !important;
+  }
+}
+
+/* More Event Indicator */
+.fc .fc-daygrid-day-bottom {
+  @apply text-xs font-medium text-gray-500 dark:text-gray-400 !important;
+}
+
+.fc .fc-daygrid-more-link {
+  @apply hover:text-blue-600 dark:hover:text-blue-400 !important;
+}
